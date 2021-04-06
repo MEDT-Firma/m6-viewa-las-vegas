@@ -2,73 +2,124 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hotels</title>
+    <title>Viewa Las Vegas</title>
 </head>
 <style>
-    *{
+    * {
         font-family: Calibri;
     }
-    .hotel1{
-        width: 700px;
+
+    .allhotels {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hotel {
+        padding: 2px 20px;
+        margin: 1em;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 25%;
+        background: white;
+        border-radius: 25px;
+    }
+
+    .hotel:hover {
+        transform: scale(1.05);
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    body {
+        background-image: url("images/background.jpg");
+    }
+
+    img {
+        width: 85%;
+        border-radius: 15px;
+    }
+
+    li{
+        font-size: 15px;
+    }
+
+    p{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    .bold{
+        font-weight: bold;
     }
 
     .img1{
-        margin: 10px;
-        width: 40%;
-        float: left;
+        width: 88%;
     }
 
-    .hotel2{
-        width: 700px;
-    }
-
-    .img2{
-        margin: 10px;
-        width: 40%;
-        float: left;
-    }
-    .hotel3{
-        width: 700px;
-    }
-
-    .img3{
-        margin: 10px;
-        width: 40%;
-        float: left;
-    }
 </style>
 <body>
-<h1>Hotels</h1>
-<ul class="hotel1">
-    <img class="img1" src="images/hotel1.jpg" alt="hotel1">
-    <h3>Queen Boutique Hotel &#9733; &#9733; &#9733; &#9733;</h3>
-    <p>Frankreich - Paris</p>
-    <p>221 Bewertungen</p>
-    <p>Queen Boutique Hotel ist eine ausgezeichnete Wahl für alle Reisenden,<br>
-        die Krakau näher kennenlernen möchten. Es bietet ein familienfreundliches Umfeld und viele Annehmlichkeiten,<br>
-        die ihren Aufenthalt noch angenehmer machen werden.</p>
-</ul>
 
+<h1 style="color: white; display: flex; justify-content: center; font-size: 50px">Viewa Las Vegas!</h1>
+<div class="allhotels">
+    <article class="hotel">
+        <h1>Hotel Bellagio &#9733; &#9733; &#9733; &#9733; &#9733;</h1>
+        <img src="images/Bellagio.jpg" alt="Bellagio">
+        <div class="list">
+            <p>Informationen:</p>
+            <ul>
+                <li>5 Sterne (&#9733;&#9733;&#9733;&#9733;&#9733;)</li>
+                <li>ab 205€ pro Nacht</li>
+                <li>Kostenloses WLAN</li>
+            </ul>
+            <p>Kontakt:</p>
+            <ul>
+                <li><span class="bold">Adresse:</span>3600 S Las Vegas Blvd, Las Vegas, NV 89109,<br> Vereinigte Staaten</li>
+                <li><span class="bold">Telefon:</span>+1 888-987-6667</li>
+                <li><span class="bold">Öffnungszeiten:</span>Rund um die Uhr geöffnet</li>
+            </ul>
+        </div>
+    </article>
 
-<ul class="hotel2">
-    <img class="img2" src="images/hotel2.jpg" alt="hotel2">
-    <h3>Amber Design Residence &#9733; &#9733; &#9733;</h3>
-    <p>USA - New York</p>
-    <p>321 Bewertungen</p>
-    <p>Perfekte Lage, ruhig und doch zentral, sehr freundliches Personal,<br>
-        Beratung und Service exzellent, top-Zimmer, sehr sauber,<br>
-        Frühstück vom Buffett für 25 Zloty im benachbarten Restaurant, feines Haus und edel ausgestattet,<br>
-        free-Cappuccino in der Lobby</p>
-</ul>
+    <article class="hotel">
+        <h1>Hotel Paris &#9733; &#9733; &#9733; &#9733;</h1>
+        <img src="images/Paris.jpg" alt="Paris">
+        <div class="list">
+            <p>Informationen:</p>
+            <ul>
+                <li>4 Sterne (&#9733;&#9733;&#9733;&#9733;)</li>
+                <li>ab 80€ pro Nacht</li>
+                <li>Kostenloses WLAN</li>
+            </ul>
+            <p>Kontakt:</p>
+            <ul>
+                <li><span class="bold">Adresse:</span>3655 S Las Vegas Blvd, Las Vegas, NV 89109,<br> Vereinigte Staaten</li>
+                <li><span class="bold">Telefon:</span>+1 877-796-2096</li>
+                <li><span class="bold">Öffnungszeiten:</span>Rund um die Uhr geöffnet</li>
+            </ul>
+        </div>
+    </article>
 
-<ul class="hotel3">
-    <img class="img3" src="images/hotel3.jpg" alt="hotel3">
-    <h3>Hotel Stary &#9733; &#9733; &#9733; &#9733; &#9733;</h3>
-    <p>Österreich - Wien</p>
-    <p>546 Bewertungen</p>
-    <p>Ein schönes familienfreundliches Hotel in Krakau zu finden, muss nicht schwierig sein.<br>
-        Willkommen im Hotel Stary, einer guten Wahl für Reisende mit Ihren Präferenzen.</p>
-</ul>
+    <article class="hotel">
+        <h1>Hotel Circa &#9733; &#9733; &#9733; &#9733; &#9733;</h1>
+        <img class="img1" src="images/Circa.jpg" alt="Circa">
+        <div class="list">
+
+            <p>Informationen:</p>
+            <ul>
+                <li>5 Sterne (&#9733;&#9733;&#9733;&#9733;&#9733;)</li>
+                <li>ab 140€ pro Nacht</li>
+                <li>Kostenloses WLAN</li>
+            </ul>
+            <p>Kontakt:</p>
+            <ul>
+                <li><span class="bold">Adresse:</span>8 Fremont Street Experience, Las Vegas, NV 89101, Vereinigte Staaten</li>
+                <li><span class="bold">Telefon:</span>+1 702-247-2258</li>
+                <li><span class="bold">Öffnungszeiten:</span>Rund um die Uhr geöffnet</li>
+            </ul>
+        </div>
+    </article>
+</div>
 
 </body>
 </html>
