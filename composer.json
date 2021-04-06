@@ -1,0 +1,7 @@
+{
+  "name": "vendor_name/m6-viewa-las-vegas",
+  "require": {
+    "typo3fluid/fluid": "^2.6",
+    "twig/twig": "^3.3"
+  }
+}
