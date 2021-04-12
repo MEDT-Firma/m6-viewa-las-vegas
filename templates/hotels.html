@@ -32,7 +32,7 @@
     }
 
     body {
-        background-image: url("images/background.jpg");
+        background-image: url("../images/background.jpg");
     }
 
     img {
@@ -63,8 +63,10 @@
 <h1 style="color: white; display: flex; justify-content: center; font-size: 50px">Viva Las Vegas!</h1>
 <div class="allhotels">
     <article class="hotel">
-        <h1>Hotel Bellagio &#9733; &#9733; &#9733; &#9733; &#9733;</h1>
-        <img src="images/Bellagio.jpg" alt="Bellagio">
+        {% for hotel in hotels %}
+        <h1>{{ hotels.name|e}} &#9733; &#9733; &#9733; &#9733; &#9733;</h1>
+        {% endfor %}
+        <img src="../images/Bellagio.jpg" alt="Bellagio">
         <div class="list">
             <p>Informationen:</p>
             <ul>
@@ -74,16 +76,16 @@
             </ul>
             <p>Kontakt:</p>
             <ul>
-                <li><span class="bold">Adresse:</span>3600 S Las Vegas Blvd, Las Vegas, NV 89109,<br> Vereinigte Staaten</li>
-                <li><span class="bold">Telefon:</span>+1 888-987-6667</li>
-                <li><span class="bold">Öffnungszeiten:</span>Rund um die Uhr geöffnet</li>
+                <li><span class="bold">Adresse: </span>3600 S Las Vegas Blvd, Las Vegas, NV 89109,<br> Vereinigte Staaten</li>
+                <li><span class="bold">Telefon: </span>+1 888-987-6667</li>
+                <li><span class="bold">Öffnungszeiten: </span>Rund um die Uhr geöffnet</li>
             </ul>
         </div>
     </article>
 
     <article class="hotel">
         <h1>Hotel Paris &#9733; &#9733; &#9733; &#9733;</h1>
-        <img src="images/Paris.jpg" alt="Paris">
+        <img src="../images/Paris.jpg" alt="Paris">
         <div class="list">
             <p>Informationen:</p>
             <ul>
@@ -93,16 +95,16 @@
             </ul>
             <p>Kontakt:</p>
             <ul>
-                <li><span class="bold">Adresse:</span>3655 S Las Vegas Blvd, Las Vegas, NV 89109,<br> Vereinigte Staaten</li>
-                <li><span class="bold">Telefon:</span>+1 877-796-2096</li>
-                <li><span class="bold">Öffnungszeiten:</span>Rund um die Uhr geöffnet</li>
+                <li><span class="bold">Adresse: </span>3655 S Las Vegas Blvd, Las Vegas, NV 89109,<br> Vereinigte Staaten</li>
+                <li><span class="bold">Telefon: </span>+1 877-796-2096</li>
+                <li><span class="bold">Öffnungszeiten: </span>Rund um die Uhr geöffnet</li>
             </ul>
         </div>
     </article>
 
     <article class="hotel">
         <h1>Hotel Circa &#9733; &#9733; &#9733; &#9733; &#9733;</h1>
-        <img class="img1" src="images/Circa.jpg" alt="Circa">
+        <img class="img1" src="../images/Circa.jpg" alt="Circa">
         <div class="list">
 
             <p>Informationen:</p>
@@ -113,9 +115,9 @@
             </ul>
             <p>Kontakt:</p>
             <ul>
-                <li><span class="bold">Adresse:</span>8 Fremont Street Experience, Las Vegas, NV 89101, Vereinigte Staaten</li>
-                <li><span class="bold">Telefon:</span>+1 702-247-2258</li>
-                <li><span class="bold">Öffnungszeiten:</span>Rund um die Uhr geöffnet</li>
+                <li><span class="bold">Adresse: </span>8 Fremont Street Experience, Las Vegas, NV 89101, Vereinigte Staaten</li>
+                <li><span class="bold">Telefon: </span>+1 702-247-2258</li>
+                <li><span class="bold">Öffnungszeiten: </span>Rund um die Uhr geöffnet</li>
             </ul>
         </div>
     </article>
