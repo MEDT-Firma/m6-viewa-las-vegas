@@ -14,11 +14,7 @@ $twig = new \Twig\Environment($loader, [
 
 
 // Liste der Hotels kommt aus PHP
-$hotels = array(
-    new hotel("Hotel Bellagio", 1, array("asdas", "asdas"),"Hotel Bellagio", "Hotel Bellagio", "Hotel Bellagio", "./images/Paris.jpg"),
-    new hotel("Hotel Bellagio", 1, array("asdas", "asdas"),"Hotel Bellagio", "Hotel Bellagio", "Hotel Bellagio", "./images/Paris.jpg"),
-    new hotel("Hotel Bellagio", 1, array("asdas", "asdas"),"Hotel Bellagio", "Hotel Bellagio", "Hotel Bellagio", "./images/Paris.jpg")
-);
+$hotels = Hotel::getDemoData();
 
 echo $twig->render(
     'hotels.twig.html',
