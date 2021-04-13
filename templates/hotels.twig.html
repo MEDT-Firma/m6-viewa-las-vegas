@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Viva Las Vegas</title>
+        <link rel="stylesheet" href="./templates/style.css">
+    </head>
+    <body>
+        <h1 class="title">Viva Las Vegas!</h1>
+        <div class="allhotels">
+            {% for hotel in hotels %}
+            <article class="hotel">
+                <h1>{{ hotel.name|e}} {% for i in 1..hotel.stars %} &#9733; {% endfor %}</h1>
+                <img src="./images/Bellagio.jpg" alt="Bellagio">
+                <div class="list">
+                    <p>Informationen:</p>
+                    <ul>
+                        {% for info in hotel.infos %}
+                        <li>{{ info|e }}</li>
+                        {% endfor %}
+                    </ul>
+                    <p>Kontakt:</p>
+                    <ul>
+                        <li><span class="bold">Adresse:</span> {{ hotel.contact_address }}</li>
+                        <li><span class="bold">Telefon:</span> {{ hotel.contact_phone|e }}</li>
+                        <li><span class="bold">Öffnungszeiten:</span> {{ hotel.contact_opening_hours }}</li>
+                    </ul>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+    </body>
+</html>
