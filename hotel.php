@@ -2,13 +2,13 @@
 
 //namespace Htlw3r\m6-viewa-las-vegas;
 
-class hotel
+class Hotel
 {
     private string $name;
     private int $stars;
     private array $infos;
     private string $contact_address;
-    private string $contact_phone;
+    private string $phone;
     private string $contact_opening_hours;
 
     /**
@@ -17,17 +17,23 @@ class hotel
      * @param int $stars
      * @param array $infos
      * @param string $contact_address
-     * @param string $contact_phone
+     * @param string $phone
      * @param string $contact_opening_hours
      */
-    public function __construct(string $name, int $stars, array $infos, string $contact_address, string $contact_phone, string $contact_opening_hours)
+    public function __construct(string $name, int $stars, array $infos, string $contact_address, string $phone, string $contact_opening_hours)
     {
         $this->name = $name;
         $this->stars = $stars;
         $this->infos = $infos;
         $this->contact_address = $contact_address;
-        $this->contact_phone = $contact_phone;
+        $this->phone = $phone;
         $this->contact_opening_hours = $contact_opening_hours;
+    }
+
+    public static function getDemoData(): array {
+        return array(
+            // new Hotel usw..
+        );
     }
 
     /**
@@ -67,7 +73,7 @@ class hotel
      */
     public function getContactPhone(): string
     {
-        return $this->contact_phone;
+        return $this->phone;
     }
 
     /**
