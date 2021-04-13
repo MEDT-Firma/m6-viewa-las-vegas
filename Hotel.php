@@ -42,7 +42,11 @@ class Hotel
 
     public static function getDemoData(): array {
         return array(
-            // new Hotel usw..
+            new Hotel("Hotel Bellagio",5,["5 Sterne (★★★★★)", "ab 205€ pro Nacht", "Kostenloses WLAN"],"3600 S Las Vegas Blvd, Las Vegas, NV 89109,
+                        Vereinigte Staaten", "+1 888-987-6667", "Rund um die Uhr geöffnet", "images/Bellagio.jpg"),
+            new Hotel("Hotel Paris", 4, ["4 Sterne (★★★★)", "ab 80€ pro Nacht", "Kostenloses WLAN"], "3655 S Las Vegas Blvd, Las Vegas, NV 89109,
+                        Vereinigte Staaten", " +1 877-796-2096", "Rund um die Uhr geöffnet", "images/Paris.jpg"),
+            new Hotel("Hotel Circa", 5, ["5 Sterne (★★★★★)", "ab 140€ pro Nacht", "Kostenloses WLAN"], "8 Fremont Street Experience, Las Vegas, NV 89101, Vereinigte Staaten", "+1 702-247-2258", "Rund um die Uhr geöffnet", "images/Circa.jpg" ),
         );
     }
 

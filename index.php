@@ -5,25 +5,9 @@
 require_once './vendor/autoload.php';
 require_once "Hotel.php";
 
-// initiate TWIG
-$loader = new \Twig\Loader\FilesystemLoader('./templates');
-$twig = new \Twig\Environment($loader, [
-    'cache' => './compilation_cache',
-]);
-
-
-
 // Liste der Hotels kommt aus PHP
-$hotels = array(
-    new hotel("Hotel Bellagio"),
-    new hotel("Hotel Paris"),
-    new hotel("Hotel Circa"),
-);
+$hotels = Hotel::getDemoData();
 
-echo $twig->render(
-    'hotels.html',
-    ['hotels' => $hotels]
-);
 
 // 1. Einlesen des HTLM Files
 $htmlresponse = readTemplateFile('./Templates/hotels.html');
