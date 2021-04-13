@@ -11,7 +11,7 @@
             {% for hotel in hotels %}
             <article class="hotel">
                 <h1>{{ hotel.name|e}} {% for i in 1..hotel.stars %} &#9733; {% endfor %}</h1>
-                <img src="./images/Bellagio.jpg" alt="Bellagio">
+                <img src="{{ hotel.imgUrl }}" alt="Bellagio">
                 <div class="list">
                     <p>Informationen:</p>
                     <ul>

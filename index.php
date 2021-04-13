@@ -2,6 +2,9 @@
 
 // namespace Htlw3r\m6-viewa-las-vegas;
 
+require_once './vendor/autoload.php';
+require_once "Hotel.php";
+
 // initiate TWIG
 $loader = new \Twig\Loader\FilesystemLoader('./templates');
 $twig = new \Twig\Environment($loader, [
@@ -9,7 +12,6 @@ $twig = new \Twig\Environment($loader, [
 ]);
 
 
-require_once './vendor/autoload.php';
 
 // Liste der Hotels kommt aus PHP
 $hotels = array(

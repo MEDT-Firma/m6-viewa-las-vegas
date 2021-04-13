@@ -10,6 +10,7 @@ class Hotel
     private string $contact_address;
     private string $phone;
     private string $contact_opening_hours;
+    private string $img_url;
 
     /**
      * hotel constructor.
@@ -20,7 +21,7 @@ class Hotel
      * @param string $phone
      * @param string $contact_opening_hours
      */
-    public function __construct(string $name, int $stars, array $infos, string $contact_address, string $phone, string $contact_opening_hours)
+    public function __construct(string $name, int $stars, array $infos, string $contact_address, string $phone, string $contact_opening_hours, string $img_url)
     {
         $this->name = $name;
         $this->stars = $stars;
@@ -28,6 +29,15 @@ class Hotel
         $this->contact_address = $contact_address;
         $this->phone = $phone;
         $this->contact_opening_hours = $contact_opening_hours;
+        $this->img_url = $img_url;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImgUrl(): string
+    {
+        return $this->img_url;
     }
 
     public static function getDemoData(): array {
