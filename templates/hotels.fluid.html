@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="templates/style.css">
+    <title>Hotels Las Vegas</title>
 </head>
 <body>
+<h1 class="title">Viva Las Vegas!</h1>
+<div class="allhotels">
+    <f:for each="{hotels}" as="hotel">
+        <article class="hotel">
+            <h1>{hotel.name}</h1>
+            <img src="{hotel.imgUrl}" alt="{hotel.name}">
+            <div class="list">
+                <ul>
+                    <f:for each="{hotel.infos}" as="info">
+                        <li>{info}</li>
+                    </f:for>
+                </ul>
+                <p>Kontakt: </p>
+                <ul>
+                    <li><span class="bold">Adresse: </span> {hotel.contactAddress}</li>
+                    <li><span class="bold">Telefon: </span> {hotel.contactPhone}</li>
+                    <li><span class="bold">Öffnungszeiten: </span> {hotel.contactOpeningHours}</li>
+                </ul>
+            </div>
+        </article>
+    </f:for>
+</div>
 
 </body>
 </html>

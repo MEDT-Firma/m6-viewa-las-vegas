@@ -10,3 +10,14 @@ $paths = $view->getTemplatePaths();
 $paths->setTemplateRootPaths([
     './templates/'
 ]);
+
+$hotels = Hotel::getDemoData();
+
+$view->assignMultiple([
+    'hotels' => $hotels
+]);
+
+$paths->setTemplatePathAndFilename('templates/hotels.fluid.html');
+$output = $view->render();
+
+echo $output;
